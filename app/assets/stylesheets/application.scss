@@ -11,3 +11,54 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+img {
+  width: 100px;
+}
+
+.banner {
+  background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+  margin-bottom: 20px;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.navbar-minimalist {
+  padding: 10px;
+}
+
+.card{
+  width: 300px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  text-align: center;
+  border: 1px solid rgb(230,230,230);
+  padding-bottom: 20px;
+}
+
+.card img {
+  width: 300px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.cards{
+  // display: flex;
+  // justify-content: space-around;
+  // margin-bottom: 30px;
+  // margin-top: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
