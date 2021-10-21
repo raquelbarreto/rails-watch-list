@@ -22,6 +22,7 @@ img {
   background-position: center;
   padding: 200px 0;
   margin-bottom: 20px;
+  height: 300px;
 }
 
 .banner h1 {
@@ -29,6 +30,10 @@ img {
   font-size: 40px;
   text-align: center;
   margin-bottom: 200px;
+}
+
+#banner-list {
+  background-image: url("https://images.unsplash.com/photo-1568876694728-451bbf694b83?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2232&q=80");
 }
 
 .navbar-minimalist {
@@ -42,6 +47,21 @@ img {
   text-align: center;
   border: 1px solid rgb(230,230,230);
   padding-bottom: 20px;
+}
+
+.card-movie {
+  width: 300px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230,230,230);
+  border: 1px solid rgb(230,230,230);
+  padding-bottom: 20px;
+  justify-content: left;
+}
+
+.card-movie img {
+  width: 300px;
+  align-self: center;
+  margin-bottom: 20px;
 }
 
 .card img {
@@ -61,4 +81,24 @@ img {
   grid-gap: 10px;
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+.options {
+  margin-bottom: 30px;
+}
+
+.text h4 {
+  font-weight: bold;
+}
+
+.text {
+  padding: 20px;
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  background-color: rgb(34, 34, 34);
+  height: 100px;
+  padding: 15px;
 }
