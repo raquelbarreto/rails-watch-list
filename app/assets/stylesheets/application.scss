@@ -16,8 +16,11 @@ img {
   width: 100px;
 }
 
-.banner {
+#banner-home {
   background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+}
+
+.banner {
   background-size: cover;
   background-position: center;
   padding: 200px 0;
@@ -56,12 +59,19 @@ img {
   border: 1px solid rgb(230,230,230);
   padding-bottom: 20px;
   justify-content: left;
+  position: relative;
 }
 
 .card-movie img {
   width: 300px;
   align-self: center;
   margin-bottom: 20px;
+}
+
+.card-movie .remove {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .card img {

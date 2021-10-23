@@ -3,7 +3,8 @@
   <%= link_to 'New list', new_list_path, class: "btn btn-primary" %>
 </div>
 
-<div class="banner" id="banner-list">
+<div class="banner" id="banner-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+url('<% if @list.photo.attached? %> <%= cl_image_path @list.photo.key, height: 300, crop: :fill %> <% end %>')">
     <div class="container">
       <h1><%= @list.name %></h2>
     </div>
@@ -19,20 +20,21 @@
         <img src='https://image.tmdb.org/t/p/w500/<%= bookmark.movie.poster_url %>'>
         <div class="text">
           <h4>
-          <%= bookmark.movie.title %> . <%= bookmark.movie.rating %>
+          <%= bookmark.movie.title %> | <%= bookmark.movie.rating %> ⭐
           </h4>
           <p>
           <%= bookmark.movie.overview %>
           </p>
         </div>
-        <p class="remove">
-        <%= link_to 'Remove', list_bookmark_path(@list, bookmark), method: :delete, data: { confirm: "Are you sure?" }%>
-        </p>
+        <div class="remove">
+          <%= link_to 'Remove', list_bookmark_path(@list, bookmark), method: :delete, data: { confirm: "Are you sure?" }%>
+        </div>
       </div>
     <% end %>
   </div>
 
   <div class="options">
+    <%= link_to 'Remove list', list_path(@list), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary"%>
     <%= link_to 'Back', lists_path, class: "btn btn-primary" %>
   </div>
 
