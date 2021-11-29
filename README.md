@@ -1,24 +1,39 @@
-# README
+# rails-watch-list
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+RailsWatchList is a platform where users can create lists of movies, to share with friends.
 
-Things you may want to cover:
+The following third party services are used by this app:
+- [Cloudinary](https://cloudinary.com/)
+- [MapBox](https://www.mapbox.com/)
 
-* Ruby version
+# Development
 
-* System dependencies
+This is a Ruby on Rails project. In order to run it locally, ensure you have installed:
 
-* Configuration
+- Correct Ruby version (see [.ruby-version](./.ruby-version))
+- [PostgreSQL](https://www.postgresql.org/download/)
 
-* Database creation
+## Credentials
 
-* Database initialization
+Ensure you have an account with Cloudinary and MapBox, then create a local `.env` file with your credentials.
+The file expects one credential for each service, like:
 
-* How to run the test suite
+```
+$ cat .env
+CLOUDINARY_URL=cloudinary://foo:bar
+MAPBOX_API_KEY=foobar
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Database Setup
 
-* Deployment instructions
+On the first local run, setup your database and seed it:
+```
+bundle exec rails db:setup
+bundle exec rails db:seed
+```
 
-* ...
+## Run the server
+
+```
+bundle exec rails s
+```
